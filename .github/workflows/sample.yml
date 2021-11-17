@@ -10,7 +10,7 @@ jobs:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     steps:
       - name: echo
-        uses: echo "this branch is develop"
+        run: echo "this branch is develop"
 
   ifBranchMatrix:
     strategy:
@@ -23,4 +23,4 @@ jobs:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     steps:
       - name: echo
-        uses: echo "this branch is develop"
+        run: echo "this branch is develop"
