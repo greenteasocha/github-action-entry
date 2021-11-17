@@ -1,0 +1,26 @@
+name: some handmade examples
+on: push
+
+jobs:
+  ifBranch:
+    if: github.ref == 'refs/branch/develop'
+    name: See branch and do jobs
+    runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+    steps:
+      - name: echo
+        uses: echo "this branch is develop"
+
+  ifBranchMatrix:
+    strategy:
+      matrix:
+        branch: ["refs/branch/develop", "refs/branch/staing"]
+    if: github.ref ==  ${{ matrix.branch }}
+    name: See branch and do jobs
+    runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+    steps:
+      - name: echo
+        uses: echo "this branch is develop"
