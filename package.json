@@ -1,7 +1,7 @@
 {
     "name": "fizz-buzz",
-    "version": "1. 0. 0",
-    "main": "index. js",
+    "version": "1.0.0",
+    "main": "index.js",
     "scripts": {
         "lint": "eslint .",
         "test": "mocha"
